@@ -9,5 +9,5 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::resource('company', CompanyController::class);
-Route::resource('employee', EmployeeController::class);
+Route::resource('company', CompanyController::class)->except('create', 'edit');
+Route::resource('employee', EmployeeController::class)->except('create', 'edit');
