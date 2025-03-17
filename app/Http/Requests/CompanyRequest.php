@@ -10,10 +10,10 @@ class CompanyRequest extends FormRequest
     {
         return [
             'name' => ['required'],
-            'nip' => ['required'],
+            'nip' => ['required', 'max:10'],
             'adress' => ['required'],
             'city' => ['required'],
-            'postal_code' => ['required'],
+            'postal_code' => ['required', 'max:6'],
         ];
     }
 
